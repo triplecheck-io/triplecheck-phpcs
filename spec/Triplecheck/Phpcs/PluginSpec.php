@@ -27,6 +27,12 @@ class PluginSpec extends ObjectBehavior
     }
 
 
+    function it_should_have_a_command_builder()
+    {
+        $this->getCommandBuilder()->shouldReturnAnInstanceOf('AdamBrett\ShellWrapper\Command\Builder');
+    }
+
+
     public function getMatchers()
     {
         return [
