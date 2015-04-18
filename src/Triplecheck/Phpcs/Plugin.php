@@ -2,6 +2,6 @@
 
 namespace Triplecheck\Phpcs;
 
-class Plugin
+class Plugin extends \Triplecheck\Common\AbstractPlugin
 {
 }
