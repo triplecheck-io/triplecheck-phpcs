@@ -1,5 +1,8 @@
 {
     "name": "amacgregor/triplecheck-phpcs",
+    "require": {
+        "adambrett/shell-wrapper": "*"
+    },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
         "phpunit/phpunit": "~4.6",

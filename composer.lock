@@ -4,8 +4,53 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "297a0a0094b6930fa793ad576fc96f46",
-    "packages": [],
+    "hash": "b92b8eba9dcb46ed2e41655799b2ad81",
+    "packages": [
+        {
+            "name": "adambrett/shell-wrapper",
+            "version": "0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adambrett/php-shell-wrapper.git",
+                "reference": "f0fc180b83238c0810064205cff8d43f4b6cd201"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adambrett/php-shell-wrapper/zipball/f0fc180b83238c0810064205cff8d43f4b6cd201",
+                "reference": "f0fc180b83238c0810064205cff8d43f4b6cd201",
+                "shasum": ""
+            },
+            "require-dev": {
+                "covex-nn/phpcb": "*@dev",
+                "fzaninotto/faker": "*@dev",
+                "mockery/mockery": "*@dev",
+                "pdepend/pdepend": "*@dev",
+                "phploc/phploc": "*@dev",
+                "phpmd/phpmd": "*@dev",
+                "phpunit/phpunit": "*@dev",
+                "sebastian/phpcpd": "*@dev",
+                "squizlabs/php_codesniffer": "*@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AdamBrett\\ShellWrapper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BDS-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Brett",
+                    "email": "adam@adambrett.co.uk"
+                }
+            ],
+            "description": "An object oriented wrapper for shell commands",
+            "time": "2014-10-16 12:55:02"
+        }
+    ],
     "packages-dev": [
         {
             "name": "behat/behat",
