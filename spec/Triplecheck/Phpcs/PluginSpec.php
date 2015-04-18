@@ -23,15 +23,15 @@ class PluginSpec extends ObjectBehavior
 
     function it_should_implement_interface_runnable()
     {
-        $this->shouldImplementInterface()->shouldReturn(true);
+        $this->shouldImplementMethod('run')->shouldReturn(true);
     }
 
 
     public function getMatchers()
     {
-        return array(
-            'implementInterface' => function ($subject, $key) {
+        return [
+            'implementMethod' => function ($subject, $key) {
                 return method_exists($subject, $key);
-            });
+            }];
     }
 }
