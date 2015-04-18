@@ -23,7 +23,7 @@ class PluginSpec extends ObjectBehavior
 
     function it_should_implement_interface_runnable()
     {
-        $this->shouldImplementMethod('run')->shouldReturn(true);
+        $this->shouldImplementMethod('run');
     }
 
 
