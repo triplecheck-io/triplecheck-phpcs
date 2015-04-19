@@ -13,16 +13,20 @@ class Scoring
 
     public function calculate()
     {
-        if(!isset($this->_results))
-        {
-            return false;
-        }
+        $this->_checkResults();
 
         foreach ($this->_results->files as $filename => $data)
         {
         }
         
-
         return $this->_results;
+    }
+
+    protected function _checkResults()
+    {
+        if(!isset($this->_results))
+        {
+            return false;
+        }
     }
 }
