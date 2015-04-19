@@ -1,7 +1,8 @@
 {
     "name": "amacgregor/triplecheck-phpcs",
     "require": {
-        "adambrett/shell-wrapper": "*"
+        "adambrett/shell-wrapper": "*",
+        "amacgregor/triplecheck-common": "dev-feature/static-class"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
@@ -19,6 +20,12 @@
             "Triplecheck\\Phpcs\\": "src/" 
         }
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "git@github.com:DemacMedia/triplecheck-common.git"
+      }
+    ],
     "authors": [
         {
             "name": "Allan MacGregor",
