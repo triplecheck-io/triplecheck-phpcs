@@ -22,7 +22,6 @@ class ScoringSpec extends ObjectBehavior
     
     function it_should_calculate_the_score()
     {
-        $this->calculate()->shouldHaveType('StdClass');
+        $this->calculate()->shouldReturn(-3);
     }
-    
 }

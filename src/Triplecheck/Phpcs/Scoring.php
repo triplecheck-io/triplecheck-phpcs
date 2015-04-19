@@ -2,6 +2,8 @@
 
 namespace Triplecheck\Phpcs;
 
+use Triplecheck\Common\Score as Score;
+
 class Scoring
 {
     protected $_results;
@@ -14,12 +16,16 @@ class Scoring
     public function calculate()
     {
         $this->_checkResults();
+        $score = new Score();
 
         foreach ($this->_results->files as $filename => $data)
         {
+            $baseScore = 5;
+            $baseScore -= $data->totals->errors; 
+            $score->addResult($baseScore);
         }
-        
-        return $this->_results;
+
+        return $score->getScore();
     }
 
     protected function _checkResults()
