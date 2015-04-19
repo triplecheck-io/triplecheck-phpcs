@@ -27,6 +27,8 @@ class Plugin extends \Triplecheck\Common\AbstractPlugin implements
         if (isset($options['param'])) {
             $this->_command->addParam($options['param']);
         }
+
+        return $this;
     }
 
     public function getCommandBuilder()
