@@ -3,7 +3,6 @@
 namespace spec\Triplecheck\Phpcs;
 
 use PhpSpec\ObjectBehavior;
-use PhpSpec\Matcher\InlineMatcher;
 use Prophecy\Argument;
 
 class PluginSpec extends ObjectBehavior
