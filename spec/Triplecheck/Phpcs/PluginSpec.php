@@ -32,7 +32,6 @@ class PluginSpec extends ObjectBehavior
         $this->getCommandBuilder()->shouldReturnAnInstanceOf('AdamBrett\ShellWrapper\Command\Builder');
     }
 
-
     public function getMatchers()
     {
         return [

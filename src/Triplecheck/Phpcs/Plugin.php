@@ -12,7 +12,7 @@ class Plugin extends \Triplecheck\Common\AbstractPlugin implements
 
     public function run()
     {
-        return;
+        $this->_shell->run($this->_command);
     }
 
     public function configure()
