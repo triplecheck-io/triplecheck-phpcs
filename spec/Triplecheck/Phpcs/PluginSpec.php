@@ -8,7 +8,6 @@ use Prophecy\Argument;
 
 class PluginSpec extends ObjectBehavior
 {
-
     function it_is_initializable()
     {
         $this->shouldHaveType('Triplecheck\Phpcs\Plugin');
@@ -26,6 +25,7 @@ class PluginSpec extends ObjectBehavior
         $this->shouldImplementMethod('run');
     }
 
+
     function it_should_be_configurable()
     {
         $configurationArray = array(
@@ -35,9 +35,18 @@ class PluginSpec extends ObjectBehavior
         );
         
         $this->configure($configurationArray);
-        
         $this->getCommandBuilder()->__toString()->shouldReturn("phpcs -vvv --test-argument 'Filename'");
-        
+    }
+
+    function it_should_return_results_on_run()
+    {
+        $configurationArray = array( 
+            "argument" => "report=json",
+            "param"    => "tests/SimpleTest.php"
+        );
+
+        $this->configure($configurationArray);
+        $this->run()->shouldBeArray();
     }
 
 

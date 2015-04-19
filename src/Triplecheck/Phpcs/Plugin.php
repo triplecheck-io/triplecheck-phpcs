@@ -13,6 +13,7 @@ class Plugin extends \Triplecheck\Common\AbstractPlugin implements
     public function run()
     {
         $this->_shell->run($this->_command);
+        return $this->_shell->getOutput();
     }
 
     public function configure($options)
