@@ -38,6 +38,7 @@ class PluginSpec extends ObjectBehavior
         $this->getCommandBuilder()->__toString()->shouldReturn("phpcs -vvv --test-argument 'Filename'");
     }
 
+
     function it_should_return_results_on_run()
     {
         $configurationArray = array( 
