@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b92b8eba9dcb46ed2e41655799b2ad81",
+    "hash": "b49a3e86c97693899bf96a0c59b188e9",
     "packages": [
         {
             "name": "adambrett/shell-wrapper",
@@ -49,6 +49,51 @@
             ],
             "description": "An object oriented wrapper for shell commands",
             "time": "2014-10-16 12:55:02"
+        },
+        {
+            "name": "amacgregor/triplecheck-common",
+            "version": "dev-feature/static-class",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DemacMedia/triplecheck-common.git",
+                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DemacMedia/triplecheck-common/zipball/a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
+                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
+                "shasum": ""
+            },
+            "require": {
+                "adambrett/shell-wrapper": "*"
+            },
+            "require-dev": {
+                "behat/behat": "~3.0",
+                "mockery/mockery": "0.9.*",
+                "phpspec/phpspec": "~2.1",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Triplecheck\\Common\\": "src/",
+                    "Triplecheck\\Phpcs\\": "../triplecheck-phpcs/src/"
+                },
+                "classmap": [
+                    "src/Triplecheck/Triplecheck.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Allan MacGregor",
+                    "email": "amacgregor@allanmacgregor.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/DemacMedia/triplecheck-common/tree/feature/static-class",
+                "issues": "https://github.com/DemacMedia/triplecheck-common/issues"
+            },
+            "time": "2015-04-19 01:56:04"
         }
     ],
     "packages-dev": [
@@ -230,6 +275,52 @@
                 "transliterator"
             ],
             "time": "2014-05-15 22:08:22"
+        },
+        {
+            "name": "bossa/phpspec2-expect",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BossaConsulting/phpspec2-expect.git",
+                "reference": "f3a80b7fa743b8a1078a7e320bd3e8b8b6283780"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BossaConsulting/phpspec2-expect/zipball/f3a80b7fa743b8a1078a7e320bd3e8b8b6283780",
+                "reference": "f3a80b7fa743b8a1078a7e320bd3e8b8b6283780",
+                "shasum": ""
+            },
+            "require": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "expect.php"
+                ],
+                "psr-0": {
+                    "Bossa\\PhpSpec\\Expect\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcello Duarte",
+                    "homepage": "http://marcelloduarte.net/"
+                }
+            ],
+            "description": "Helper that decorates any SUS with a phpspec lazy object wrapper",
+            "keywords": [
+                "BDD",
+                "SpecBDD",
+                "TDD",
+                "spec",
+                "specification"
+            ],
+            "time": "2014-09-12 09:25:51"
         },
         {
             "name": "doctrine/instantiator",
@@ -1902,7 +1993,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "amacgregor/triplecheck-common": 20,
+        "bossa/phpspec2-expect": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -1,13 +1,15 @@
 {
     "name": "amacgregor/triplecheck-phpcs",
     "require": {
-        "adambrett/shell-wrapper": "*"
+        "adambrett/shell-wrapper": "*",
+        "amacgregor/triplecheck-common": "dev-feature/static-class"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
         "phpunit/phpunit": "~4.6",
         "mockery/mockery": "0.9.*",
-        "behat/behat": "~3.0"
+        "behat/behat": "~3.0",
+        "bossa/phpspec2-expect": "dev-master"
     },
     "type": "library",
     "config": {
@@ -19,6 +21,12 @@
             "Triplecheck\\Phpcs\\": "src/" 
         }
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "git@github.com:DemacMedia/triplecheck-common.git"
+      }
+    ],
     "authors": [
         {
             "name": "Allan MacGregor",
