@@ -15,9 +15,17 @@ class Plugin extends \Triplecheck\Common\AbstractPlugin implements
         $this->_shell->run($this->_command);
     }
 
-    public function configure()
+    public function configure($options)
     {
-        return;
+        if (isset($options['flag'])) {
+            $this->_command->addFlag($options['flag']);
+        }
+        if (isset($options['argument'])) {
+            $this->_command->addArgument($options['argument']);
+        }
+        if (isset($options['param'])) {
+            $this->_command->addParam($options['param']);
+        }
     }
 
     public function getCommandBuilder()

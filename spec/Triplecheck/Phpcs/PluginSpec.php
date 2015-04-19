@@ -26,11 +26,26 @@ class PluginSpec extends ObjectBehavior
         $this->shouldImplementMethod('run');
     }
 
+    function it_should_be_configurable()
+    {
+        $configurationArray = array(
+            "argument"  => "test-argument",
+            "param"     => "Filename",
+            "flag"      => "vvv"
+        );
+        
+        $this->configure($configurationArray);
+        
+        $this->getCommandBuilder()->__toString()->shouldReturn("phpcs -vvv --test-argument 'Filename'");
+        
+    }
+
 
     function it_should_have_a_command_builder()
     {
         $this->getCommandBuilder()->shouldReturnAnInstanceOf('AdamBrett\ShellWrapper\Command\Builder');
     }
+
 
     public function getMatchers()
     {
