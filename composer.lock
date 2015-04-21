@@ -56,16 +56,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jamescowie/triplecheck-common.git",
-                "reference": "22e8d72d1173b17e04827194d658775c7d629c6b"
+                "reference": "ff9df0d6966705c411469a5d16e2fae8cc97a5eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jamescowie/triplecheck-common/zipball/22e8d72d1173b17e04827194d658775c7d629c6b",
-                "reference": "22e8d72d1173b17e04827194d658775c7d629c6b",
+                "url": "https://api.github.com/repos/jamescowie/triplecheck-common/zipball/ff9df0d6966705c411469a5d16e2fae8cc97a5eb",
+                "reference": "ff9df0d6966705c411469a5d16e2fae8cc97a5eb",
                 "shasum": ""
             },
             "require": {
-                "adambrett/shell-wrapper": "*"
+                "adambrett/shell-wrapper": "*",
+                "symfony/console": "2.6.*"
             },
             "require-dev": {
                 "behat/behat": "~3.0",
@@ -92,7 +93,7 @@
             "support": {
                 "source": "https://github.com/jamescowie/triplecheck-common/tree/develop"
             },
-            "time": "2015-04-19 20:48:08"
+            "time": "2015-04-21 21:03:04"
         },
         {
             "name": "magento-ecg/coding-standard",
