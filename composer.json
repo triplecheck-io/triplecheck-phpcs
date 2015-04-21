@@ -4,7 +4,8 @@
         "adambrett/shell-wrapper": "*",
         "amacgregor/triplecheck-common": "dev-develop",
         "squizlabs/php_codesniffer": "2.0.*@dev",
-        "magento-ecg/coding-standard": "dev-master"
+        "magento-ecg/coding-standard": "dev-master",
+        "symfony/console": "2.6.*"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",

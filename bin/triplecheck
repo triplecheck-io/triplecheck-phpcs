@@ -18,17 +18,6 @@ if ((!$loader = includeIfExists(__DIR__.'/../vendor/autoload.php')) && (!$loader
     exit(1);
 }
 
-use Triplecheck\Common;
+$application = new Triplecheck\Common\Application($argc[1]);
+$application->run($argv[1])->getScore();
 
-$plugin = Triplecheck\Triplecheck::create('Triplecheck\Phpcs\Plugin');
-$options = [
-    "argument" => "report=json --standard=vendor/magento-ecg/coding-standard/Ecg/",
-    "param"    => $argv[1]
-];
-$results = $plugin->configure($options)->run();
-
-$results = json_decode($results[0]);
-//die(print_r($results));
-$scorer = new Triplecheck\Phpcs\Scoring($results);
-$score = $scorer->calculate();
-echo "Your code score is: $score \r\n";
