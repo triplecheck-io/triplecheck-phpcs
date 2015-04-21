@@ -21,11 +21,15 @@ class Scoring
         foreach ($this->_results->files as $filename => $data)
         {
             $baseScore = 5;
-            $baseScore -= $data->errors; 
+            if ($baseScore > $data->errors) { 
+                $baseScore -= $data->errors; 
+            }else {
+                $baseScore = 0;
+            }
             $score->addResult($baseScore);
         }
 
-        return $score->getScore() ;
+        return $score->getScore() / $score->getFileCount() ;
     }
 
     protected function _checkResults()
