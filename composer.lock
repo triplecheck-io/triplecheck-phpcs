@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b49a3e86c97693899bf96a0c59b188e9",
+    "hash": "b28eb1b0810d0c059cd53961e2610ea4",
     "packages": [
         {
             "name": "adambrett/shell-wrapper",
@@ -52,16 +52,16 @@
         },
         {
             "name": "amacgregor/triplecheck-common",
-            "version": "dev-feature/static-class",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DemacMedia/triplecheck-common.git",
-                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5"
+                "url": "https://github.com/jamescowie/triplecheck-common.git",
+                "reference": "22e8d72d1173b17e04827194d658775c7d629c6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DemacMedia/triplecheck-common/zipball/a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
-                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
+                "url": "https://api.github.com/repos/jamescowie/triplecheck-common/zipball/22e8d72d1173b17e04827194d658775c7d629c6b",
+                "reference": "22e8d72d1173b17e04827194d658775c7d629c6b",
                 "shasum": ""
             },
             "require": {
@@ -90,10 +90,117 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/DemacMedia/triplecheck-common/tree/feature/static-class",
-                "issues": "https://github.com/DemacMedia/triplecheck-common/issues"
+                "source": "https://github.com/jamescowie/triplecheck-common/tree/develop"
             },
-            "time": "2015-04-19 01:56:04"
+            "time": "2015-04-19 20:48:08"
+        },
+        {
+            "name": "magento-ecg/coding-standard",
+            "version": "dev-master",
+            "target-dir": "Ecg",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magento-ecg/coding-standard.git",
+                "reference": "dbac5b138cc92a3d94de142f782fe9df397a0d81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magento-ecg/coding-standard/zipball/dbac5b138cc92a3d94de142f782fe9df397a0d81",
+                "reference": "dbac5b138cc92a3d94de142f782fe9df397a0d81",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Magento Expert Consulting Group",
+                    "homepage": "http://magentocommerce.com/consulting",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A set of PHP_CodeSniffer rules and sniffs.",
+            "homepage": "https://github.com/magento-ecg/coding-standard",
+            "time": "2015-04-13 19:01:23"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "76853c5707775b17d68c8878a3672c952692ea30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/76853c5707775b17d68c8878a3672c952692ea30",
+                "reference": "76853c5707775b17d68c8878a3672c952692ea30",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2015-04-21 05:31:04"
         }
     ],
     "packages-dev": [
@@ -1995,6 +2102,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "amacgregor/triplecheck-common": 20,
+        "squizlabs/php_codesniffer": 20,
+        "magento-ecg/coding-standard": 20,
         "bossa/phpspec2-expect": 20
     },
     "prefer-stable": false,
