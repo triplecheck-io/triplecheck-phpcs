@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b49a3e86c97693899bf96a0c59b188e9",
+    "hash": "70dcf5334a35a2b7a9ab86caea5d95a6",
     "packages": [
         {
             "name": "adambrett/shell-wrapper",
@@ -52,20 +52,21 @@
         },
         {
             "name": "amacgregor/triplecheck-common",
-            "version": "dev-feature/static-class",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DemacMedia/triplecheck-common.git",
-                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5"
+                "url": "https://github.com/jamescowie/triplecheck-common.git",
+                "reference": "ff9df0d6966705c411469a5d16e2fae8cc97a5eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DemacMedia/triplecheck-common/zipball/a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
-                "reference": "a7e6efa5d4cb1c3c61bb45e2567db578d99b00f5",
+                "url": "https://api.github.com/repos/jamescowie/triplecheck-common/zipball/ff9df0d6966705c411469a5d16e2fae8cc97a5eb",
+                "reference": "ff9df0d6966705c411469a5d16e2fae8cc97a5eb",
                 "shasum": ""
             },
             "require": {
-                "adambrett/shell-wrapper": "*"
+                "adambrett/shell-wrapper": "*",
+                "symfony/console": "2.6.*"
             },
             "require-dev": {
                 "behat/behat": "~3.0",
@@ -90,10 +91,175 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/DemacMedia/triplecheck-common/tree/feature/static-class",
-                "issues": "https://github.com/DemacMedia/triplecheck-common/issues"
+                "source": "https://github.com/jamescowie/triplecheck-common/tree/develop"
             },
-            "time": "2015-04-19 01:56:04"
+            "time": "2015-04-21 21:03:04"
+        },
+        {
+            "name": "magento-ecg/coding-standard",
+            "version": "dev-master",
+            "target-dir": "Ecg",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magento-ecg/coding-standard.git",
+                "reference": "dbac5b138cc92a3d94de142f782fe9df397a0d81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magento-ecg/coding-standard/zipball/dbac5b138cc92a3d94de142f782fe9df397a0d81",
+                "reference": "dbac5b138cc92a3d94de142f782fe9df397a0d81",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Magento Expert Consulting Group",
+                    "homepage": "http://magentocommerce.com/consulting",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A set of PHP_CodeSniffer rules and sniffs.",
+            "homepage": "https://github.com/magento-ecg/coding-standard",
+            "time": "2015-04-13 19:01:23"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "76853c5707775b17d68c8878a3672c952692ea30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/76853c5707775b17d68c8878a3672c952692ea30",
+                "reference": "76853c5707775b17d68c8878a3672c952692ea30",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2015-04-21 05:31:04"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.6.6",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-03-30 15:54:10"
         }
     ],
     "packages-dev": [
@@ -1554,64 +1720,6 @@
             "time": "2015-03-30 15:54:10"
         },
         {
-            "name": "symfony/console",
-            "version": "v2.6.6",
-            "target-dir": "Symfony/Component/Console",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Console.git",
-                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/5b91dc4ed5eb08553f57f6df04c4730a73992667",
-                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1",
-                "symfony/phpunit-bridge": "~2.7",
-                "symfony/process": "~2.1"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Console\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-30 15:54:10"
-        },
-        {
             "name": "symfony/dependency-injection",
             "version": "v2.6.6",
             "target-dir": "Symfony/Component/DependencyInjection",
@@ -1995,6 +2103,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "amacgregor/triplecheck-common": 20,
+        "squizlabs/php_codesniffer": 20,
+        "magento-ecg/coding-standard": 20,
         "bossa/phpspec2-expect": 20
     },
     "prefer-stable": false,
