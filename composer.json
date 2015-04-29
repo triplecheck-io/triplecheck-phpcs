@@ -2,14 +2,18 @@
     "name": "amacgregor/triplecheck-phpcs",
     "require": {
         "adambrett/shell-wrapper": "*",
-        "amacgregor/triplecheck-common": "dev-feature/static-class"
+        "amacgregor/triplecheck-common": "dev-develop",
+        "squizlabs/php_codesniffer": "2.0.*@dev",
+        "magento-ecg/coding-standard": "dev-master",
+        "symfony/console": "2.6.*"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",
         "phpunit/phpunit": "~4.6",
         "mockery/mockery": "0.9.*",
         "behat/behat": "~3.0",
-        "bossa/phpspec2-expect": "dev-master"
+        "bossa/phpspec2-expect": "dev-master",
+        "symfony/process": "~2.1"
     },
     "type": "library",
     "config": {
@@ -24,7 +28,7 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "git@github.com:DemacMedia/triplecheck-common.git"
+        "url": "git@github.com:jamescowie/triplecheck-common.git"
       }
     ],
     "authors": [
@@ -32,5 +36,6 @@
             "name": "Allan MacGregor",
             "email": "amacgregor@allanmacgregor.com"
         }
-    ]
+    ],
+    "bin": ["bin/triplecheck"]
 }

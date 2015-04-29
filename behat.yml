@@ -3,3 +3,7 @@ default:
         core_features:
             paths:    [ %paths.base%/features/core ]
             contexts: [ CoreDomainContext ]
+
+        cli_features:
+            paths:    [ %paths.base%/features/cli ]
+            contexts: [ CliContext ]

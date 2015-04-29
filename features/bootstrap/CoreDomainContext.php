@@ -3,8 +3,6 @@
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
 use PHPUnit_Framework_Assert as assert;
 
 /**
@@ -13,6 +11,7 @@ use PHPUnit_Framework_Assert as assert;
 class CoreDomainContext implements Context, SnippetAcceptingContext
 {
     private $folderPath;
+    private $plugin;
 
     /**
      * @Given I have a module located in :folderPath
@@ -28,7 +27,8 @@ class CoreDomainContext implements Context, SnippetAcceptingContext
      */
     public function iRunTripleCheck()
     {
-        throw new PendingException();
+        $this->plugin = new \Triplecheck\Phpcs\Plugin();
+        $this->plugin->run();
     }
 
     /**
