@@ -4,7 +4,7 @@ Feature: A user can set a configuration file to change the behaviour of triple c
   So that I have maximum control over my quality checks
 
   Scenario: A configuration file is loaded into the system
-    Given I have a file located in the root of the project called 'tiplecheck.yml' with the following content:
+    Given I have a file located in the root of the project called 'triplecheck.yml' with the following content:
     """
 default:
     standard: ECG
